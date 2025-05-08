@@ -3,7 +3,21 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Escuela Bíblica Kids - Réplica</title>
+    <title>Escuela Bíblica Kids - Réplica con DataLayer</title>
+    <script>
+        // Inicialización del DataLayer
+        // Es importante que esto esté lo más arriba posible en el <head>
+        // y antes de cualquier script de GTM o similar.
+        window.dataLayer = window.dataLayer || [];
+        
+        // Ejemplo de un evento enviado al cargar la página
+        // Esto podría ser un 'page_view' o información inicial.
+        dataLayer.push({
+            'event': 'page_view',
+            'page_path': window.location.pathname + window.location.search + window.location.hash, // Captura la URL completa
+            'page_title': document.title // Captura el título del documento
+        });
+    </script>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
     <style>
@@ -20,7 +34,7 @@
     <div class="bg-purple-600 text-white text-sm text-center py-2 px-4">
         <span class="bg-yellow-400 text-black font-bold text-xs py-0.5 px-2 rounded mr-2">NUEVO</span>
         <span>Anunciadas nuevas fechas para Talleres 2025:</span>
-        <a href="#" class="underline hover:text-yellow-300 ml-1">Descubre si es para ti →</a>
+        <a href="#" id="new-announcement-link" class="underline hover:text-yellow-300 ml-1">Descubre si es para ti →</a>
     </div>
 
     <header class="bg-white shadow-md sticky top-0 z-50">
@@ -33,7 +47,7 @@
                 <a href="#quienes-somos" class="text-gray-500 hover:text-purple-600 text-sm transition duration-300">Quiénes Somos</a>
                 <a href="#recursos" class="text-gray-500 hover:text-purple-600 text-sm transition duration-300">Recursos</a>
                 <a href="#testimonios" class="text-gray-500 hover:text-purple-600 text-sm transition duration-300">Testimonios</a>
-                <a href="#" class="text-gray-500 hover:text-purple-600 text-sm transition duration-300">Donar</a>
+                <a href="#" id="nav-donate-link" class="text-gray-500 hover:text-purple-600 text-sm transition duration-300">Donar</a>
             </div>
             <div class="md:hidden">
                 <button id="mobile-menu-button" class="text-gray-600 focus:outline-none">
@@ -46,7 +60,7 @@
             <a href="#quienes-somos" class="block px-6 py-2 text-gray-500 hover:bg-gray-100 hover:text-purple-600 text-sm">Quiénes Somos</a>
             <a href="#recursos" class="block px-6 py-2 text-gray-500 hover:bg-gray-100 hover:text-purple-600 text-sm">Recursos</a>
             <a href="#testimonios" class="block px-6 py-2 text-gray-500 hover:bg-gray-100 hover:text-purple-600 text-sm">Testimonios</a>
-            <a href="#" class="block px-6 py-2 text-gray-500 hover:bg-gray-100 hover:text-purple-600 text-sm">Donar</a>
+            <a href="#" id="mobile-donate-link" class="block px-6 py-2 text-gray-500 hover:bg-gray-100 hover:text-purple-600 text-sm">Donar</a>
         </div>
     </header>
 
@@ -59,7 +73,7 @@
                 Recursos bíblicos creativos y prácticos para iglesias, padres y maestros.
             </p>
             <a href="https://google.com" target="_blank" rel="noopener noreferrer"
-               class="bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-8 rounded-lg text-lg transition duration-300 inline-block">
+               id="cta-hero-acceso" class="bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-8 rounded-lg text-lg transition duration-300 inline-block">
                 ¡QUIERO ACCESO AHORA!
             </a>
         </div>
@@ -72,9 +86,9 @@
                 <div class="md:w-1/2">
                      <img
                         src="https://placehold.co/600x400/e2e8f0/334155?text=Imagen+Equipo"
-                        alt="Equipo"
+                        alt="Equipo de Escuela Bíblica Kids"
                         class="rounded-lg shadow-lg mx-auto"
-                        onerror="this.onerror=null; this.src='https://placehold.co/600x400/cccccc/ffffff?text=Error+Imagen'"
+                        onerror="this.onerror=null; this.src='https://placehold.co/600x400/cccccc/ffffff?text=Error+Cargando+Imagen+Equipo'"
                      />
                 </div>
                 <div class="md:w-1/2 text-left">
@@ -91,36 +105,38 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div class="bg-white p-6 rounded-lg shadow-lg transform hover:scale-105 transition duration-300">
                      <img
-                        src="https://placehold.co/400x300/a5f3fc/0891b2?text=Recurso+1"
-                        alt="Recurso 1"
+                        src="https://placehold.co/400x300/a5f3fc/0891b2?text=Lecciones+B%C3%ADblicas"
+                        alt="Recurso Lecciones Bíblicas"
                         class="rounded-md mb-4 w-full h-48 object-cover"
                         onerror="this.onerror=null; this.src='https://placehold.co/400x300/cccccc/ffffff?text=Error+Imagen'"
                      />
                     <h3 class="text-xl font-semibold mb-2 text-blue-700">Lecciones Bíblicas</h3>
                     <p class="text-gray-600 mb-4">Series completas de lecciones para escuela dominical o grupos pequeños.</p>
-                    <a href="#" class="text-blue-600 hover:underline font-medium">Ver más</a>
+                    <a href="#" id="ver-mas-lecciones" data-resource-name="Lecciones Bíblicas" class="text-blue-600 hover:underline font-medium resource-view-more-link">Ver más</a>
                 </div>
                 <div class="bg-white p-6 rounded-lg shadow-lg transform hover:scale-105 transition duration-300">
                      <img
-                        src="https://placehold.co/400x300/fecaca/991b1b?text=Recurso+2"
-                        alt="Recurso 2"
+                        src="https://placehold.co/400x300/fecaca/991b1b?text=Manualidades"
+                        alt="Recurso Manualidades y Actividades"
                         class="rounded-md mb-4 w-full h-48 object-cover"
                         onerror="this.onerror=null; this.src='https://placehold.co/400x300/cccccc/ffffff?text=Error+Imagen'"
                      />
                     <h3 class="text-xl font-semibold mb-2 text-red-700">Manualidades y Actividades</h3>
                     <p class="text-gray-600 mb-4">Ideas creativas para reforzar el aprendizaje bíblico de forma práctica.</p>
-                    <a href="#" class="text-red-600 hover:underline font-medium">Ver más</a>
+                    <a href="#" data-resource-name="Manualidades y Actividades"
+                       class="text-red-600 hover:underline font-medium resource-view-more-link">Ver más</a>
                 </div>
                 <div class="bg-white p-6 rounded-lg shadow-lg transform hover:scale-105 transition duration-300">
                      <img
-                        src="https://placehold.co/400x300/bbf7d0/15803d?text=Recurso+3"
-                        alt="Recurso 3"
+                        src="https://placehold.co/400x300/bbf7d0/15803d?text=Capacitaci%C3%B3n"
+                        alt="Recurso Capacitación para Maestros"
                         class="rounded-md mb-4 w-full h-48 object-cover"
                         onerror="this.onerror=null; this.src='https://placehold.co/400x300/cccccc/ffffff?text=Error+Imagen'"
                      />
                     <h3 class="text-xl font-semibold mb-2 text-green-700">Capacitación para Maestros</h3>
                     <p class="text-gray-600 mb-4">Talleres y cursos para equipar a líderes y voluntarios del ministerio infantil.</p>
-                    <a href="#" class="text-green-600 hover:underline font-medium">Ver más</a>
+                    <a href="#" data-resource-name="Capacitación para Maestros"
+                       class="text-green-600 hover:underline font-medium resource-view-more-link">Ver más</a>
                 </div>
             </div>
         </div>
@@ -131,19 +147,19 @@
             <h2 class="text-3xl font-bold mb-12 text-gray-800">Testimonios</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div class="bg-gray-50 p-6 rounded-lg shadow-md flex flex-col">
-                    <img src="https://placehold.co/150x200/e0e0e0/999999?text=Testimonio+1" alt="Testimonio 1" class="mx-auto mb-4 rounded w-32 h-40 object-cover" onerror="this.onerror=null; this.src='https://placehold.co/150x200/cccccc/ffffff?text=Error'" />
-                    <h3 class="text-lg font-semibold text-gray-800 mb-2 text-center">Título Testimonio 1</h3>
-                    <p class="text-sm text-gray-600 text-center">Descripción breve del testimonio o comentario inspirador sobre cómo los recursos han sido de bendición.</p>
+                    <img src="https://placehold.co/150x200/e0e0e0/999999?text=Persona+Feliz+1" alt="Testimonio de Cliente Satisfecho 1" class="mx-auto mb-4 rounded w-32 h-40 object-cover" onerror="this.onerror=null; this.src='https://placehold.co/150x200/cccccc/ffffff?text=Error'" />
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2 text-center">Ana G. - Maestra Escuela Dominical</h3>
+                    <p class="text-sm text-gray-600 text-center">"Los materiales son increíblemente creativos y fáciles de usar. ¡Mis niños los aman!"</p>
                 </div>
                  <div class="bg-gray-50 p-6 rounded-lg shadow-md flex flex-col">
-                    <img src="https://placehold.co/150x200/d0d0d0/999999?text=Testimonio+2" alt="Testimonio 2" class="mx-auto mb-4 rounded w-32 h-40 object-cover" onerror="this.onerror=null; this.src='https://placehold.co/150x200/cccccc/ffffff?text=Error'" />
-                    <h3 class="text-lg font-semibold text-gray-800 mb-2 text-center">Título Testimonio 2</h3>
-                    <p class="text-sm text-gray-600 text-center">Otro ejemplo de texto que describe la experiencia positiva de alguien usando los materiales o participando.</p>
+                    <img src="https://placehold.co/150x200/d0d0d0/999999?text=Persona+Feliz+2" alt="Testimonio de Cliente Satisfecho 2" class="mx-auto mb-4 rounded w-32 h-40 object-cover" onerror="this.onerror=null; this.src='https://placehold.co/150x200/cccccc/ffffff?text=Error'" />
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2 text-center">Carlos P. - Padre de Familia</h3>
+                    <p class="text-sm text-gray-600 text-center">"Finalmente encontré recursos que me ayudan a enseñar la Biblia a mis hijos de forma divertida y significativa."</p>
                 </div>
                  <div class="bg-gray-50 p-6 rounded-lg shadow-md flex flex-col">
-                    <img src="https://placehold.co/150x200/c0c0c0/999999?text=Testimonio+3" alt="Testimonio 3" class="mx-auto mb-4 rounded w-32 h-40 object-cover" onerror="this.onerror=null; this.src='https://placehold.co/150x200/cccccc/ffffff?text=Error'" />
-                    <h3 class="text-lg font-semibold text-gray-800 mb-2 text-center">Título Testimonio 3</h3>
-                    <p class="text-sm text-gray-600 text-center">Un tercer testimonio que resalta diferentes beneficios o aspectos del ministerio, completando la sección.</p>
+                    <img src="https://placehold.co/150x200/c0c0c0/999999?text=Persona+Feliz+3" alt="Testimonio de Cliente Satisfecho 3" class="mx-auto mb-4 rounded w-32 h-40 object-cover" onerror="this.onerror=null; this.src='https://placehold.co/150x200/cccccc/ffffff?text=Error'" />
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2 text-center">Laura M. - Líder Ministerio Infantil</h3>
+                    <p class="text-sm text-gray-600 text-center">"La capacitación para maestros transformó nuestro ministerio. ¡Totalmente recomendado!"</p>
                 </div>
             </div>
         </div>
@@ -154,15 +170,15 @@
              <div class="grid grid-cols-1 gap-8 max-w-lg mx-auto">
                  <div class="text-center mb-8">
                      <a href="https://google.com" target="_blank" rel="noopener noreferrer"
-                        class="bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-8 rounded-lg text-lg transition duration-300 inline-block">
+                        id="cta-nueva-seccion-acceso" class="bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-8 rounded-lg text-lg transition duration-300 inline-block">
                          ¡QUIERO ACCESO AHORA!
                      </a>
                  </div>
                  <div class="bg-gray-100 rounded-lg shadow-md flex items-center justify-center h-72 p-6">
-                     <p class="text-gray-500 text-xl font-semibold">Marcador 1</p>
+                     <p class="text-gray-500 text-xl font-semibold">Contenido Adicional 1</p>
                  </div>
                  <div class="bg-gray-100 rounded-lg shadow-md flex items-center justify-center h-72 p-6">
-                     <p class="text-gray-500 text-xl font-semibold">Marcador 2</p>
+                     <p class="text-gray-500 text-xl font-semibold">Contenido Adicional 2</p>
                  </div>
              </div>
         </div>
@@ -172,7 +188,7 @@
         <div class="container mx-auto px-6">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
                 <div class="md:col-span-1">
-                    <img src="https://i.imgur.com/XmelnjE.png" alt="Sello de Garantía 100%" class="mx-auto w-48 h-auto md:w-full max-w-[250px]" onerror="this.onerror=null; this.src='https://placehold.co/200/cccccc/ffffff?text=Garantia'" />
+                    <img src="https://i.imgur.com/XmelnjE.png" alt="Sello de Garantía 100% Satisfacción por 7 Días" class="mx-auto w-48 h-auto md:w-full max-w-[250px]" onerror="this.onerror=null; this.src='https://placehold.co/200/cccccc/ffffff?text=Sello+Garantia'" />
                 </div>
                 <div class="md:col-span-2 text-center md:text-left">
                     <h3 class="text-2xl lg:text-3xl font-bold text-gray-800 mb-2">Tu Inversión 100% Segura: Garantía de 7 Días</h3>
@@ -189,7 +205,7 @@
         <div class="container mx-auto px-6">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
                 <div>
-                    <img src="https://placehold.co/300x400/e2e8f0/334155?text=Kit+Principal" alt="Kit Escuela Bíblica Kids" class="mx-auto rounded-lg shadow-md w-auto max-w-xs" onerror="this.onerror=null; this.src='https://placehold.co/300x400/cccccc/ffffff?text=Kit'" />
+                    <img src="https://placehold.co/300x400/e2e8f0/334155?text=Kit+Completo+EBK" alt="Kit Principal Escuela Bíblica Kids" class="mx-auto rounded-lg shadow-md w-auto max-w-xs" onerror="this.onerror=null; this.src='https://placehold.co/300x400/cccccc/ffffff?text=Error+Kit'" />
                 </div>
                 <div>
                     <p class="text-sm text-gray-500 uppercase tracking-wider mb-1">Recapitulemos</p>
@@ -236,31 +252,131 @@
     </footer>
 
     <script>
+        // Script para el menú móvil
         const mobileMenuButton = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
 
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-
-        const mobileLinks = mobileMenu.querySelectorAll('a');
-        mobileLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                 if (!link.href.includes('#') || link.pathname !== window.location.pathname) {
-                    return;
-                 }
-                 if (link.getAttribute('href') === '#' || link.href.endsWith('#')) {
-                    if (!mobileMenu.classList.contains('hidden')) {
-                         if (link.getAttribute('href') === '#') {
-                             mobileMenu.classList.add('hidden');
-                         }
-                    }
-                    return;
-                 }
-
-                mobileMenu.classList.add('hidden');
+        if (mobileMenuButton && mobileMenu) {
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
             });
+
+            const mobileLinks = mobileMenu.querySelectorAll('a');
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                     if (!link.href.includes('#') || link.pathname !== window.location.pathname) {
+                        return;
+                     }
+                     if (link.getAttribute('href') === '#' || link.href.endsWith('#')) {
+                        if (!mobileMenu.classList.contains('hidden')) {
+                             if (link.getAttribute('href') === '#') {
+                                 mobileMenu.classList.add('hidden');
+                             }
+                        }
+                        return;
+                     }
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+        }
+
+        // Scripts para enviar eventos al DataLayer
+        // Es buena práctica envolver esto en un DOMContentLoaded para asegurar que los elementos existan
+        document.addEventListener('DOMContentLoaded', function() {
+            // Seguimiento del clic en el botón CTA principal de la sección Héroe
+            const ctaHeroButton = document.getElementById('cta-hero-acceso');
+            if (ctaHeroButton) {
+                ctaHeroButton.addEventListener('click', function() {
+                    dataLayer.push({
+                        'event': 'cta_click', // Nombre genérico del evento
+                        'event_category': 'CTA', // Categoría del evento
+                        'event_action': 'click', // Acción realizada
+                        'event_label': 'Quiero Acceso Ahora - Hero', // Etiqueta descriptiva
+                        'link_url': this.href, // URL del enlace
+                        'link_text': this.textContent.trim() // Texto del enlace
+                    });
+                });
+            }
+
+            // Seguimiento del clic en el botón CTA de la "Nueva Sección"
+            const ctaNuevaSeccionButton = document.getElementById('cta-nueva-seccion-acceso');
+            if (ctaNuevaSeccionButton) {
+                ctaNuevaSeccionButton.addEventListener('click', function() {
+                    dataLayer.push({
+                        'event': 'cta_click',
+                        'event_category': 'CTA',
+                        'event_action': 'click',
+                        'event_label': 'Quiero Acceso Ahora - Nueva Seccion',
+                        'link_url': this.href,
+                        'link_text': this.textContent.trim()
+                    });
+                });
+            }
+            
+            // Seguimiento de clics en los enlaces "Ver más" de los recursos
+            // Se usa una clase común 'resource-view-more-link' y 'data-resource-name'
+            const resourceLinks = document.querySelectorAll('.resource-view-more-link');
+            resourceLinks.forEach(link => {
+                link.addEventListener('click', function(event) {
+                    const resourceName = this.getAttribute('data-resource-name') || 'Desconocido';
+                    dataLayer.push({
+                        'event': 'resource_link_click',
+                        'event_category': 'Recursos',
+                        'event_action': 'click_ver_mas',
+                        'event_label': resourceName,
+                        'link_url': this.href,
+                        'link_text': this.textContent.trim()
+                    });
+                });
+            });
+
+            // Seguimiento del clic en el enlace del anuncio nuevo
+            const newAnnouncementLink = document.getElementById('new-announcement-link');
+            if (newAnnouncementLink) {
+                newAnnouncementLink.addEventListener('click', function() {
+                    dataLayer.push({
+                        'event': 'announcement_click',
+                        'event_category': 'Header Announcement',
+                        'event_action': 'click',
+                        'event_label': this.textContent.trim(),
+                        'link_url': this.href
+                    });
+                });
+            }
+
+            // Seguimiento de clics en el botón Donar (Navegación principal)
+            const navDonateLink = document.getElementById('nav-donate-link');
+            if (navDonateLink) {
+                navDonateLink.addEventListener('click', function() {
+                    dataLayer.push({
+                        'event': 'navigation_click',
+                        'event_category': 'Header Navigation',
+                        'event_action': 'click_donate',
+                        'event_label': 'Donar - Nav',
+                        'link_url': this.href
+                    });
+                });
+            }
+
+            // Seguimiento de clics en el botón Donar (Menú móvil)
+            const mobileDonateLink = document.getElementById('mobile-donate-link');
+            if (mobileDonateLink) {
+                mobileDonateLink.addEventListener('click', function() {
+                     dataLayer.push({
+                        'event': 'navigation_click',
+                        'event_category': 'Mobile Navigation',
+                        'event_action': 'click_donate',
+                        'event_label': 'Donar - Mobile',
+                        'link_url': this.href
+                    });
+                });
+            }
+
+            // Puedes añadir más listeners para otros elementos aquí.
+            // Por ejemplo, para los enlaces del menú de navegación, pie de página, etc.
+            // Es importante dar IDs únicos o clases específicas a los elementos que quieras rastrear.
         });
+
     </script>
 
 </body>
