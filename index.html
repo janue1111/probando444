@@ -5,17 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Escuela Bíblica Kids - Réplica con DataLayer</title>
     <script>
-        // Inicialización del DataLayer
-        // Es importante que esto esté lo más arriba posible en el <head>
-        // y antes de cualquier script de GTM o similar.
         window.dataLayer = window.dataLayer || [];
-
-        // Ejemplo de un evento enviado al cargar la página
-        // Esto podría ser un 'page_view' o información inicial.
         dataLayer.push({
-            'event': 'page_view',
-            'page_path': window.location.pathname + window.location.search + window.location.hash, // Captura la URL completa
-            'page_title': document.title // Captura el título del documento
+            'event': 'pageView', // Cambiado de 'page_view' a 'pageView'
+            'pageLocation': window.location.href, // Añadido/cambiado a la URL completa
+            'pagePath': window.location.pathname, // Mantengo pagePath si lo prefieres, o lo podrías quitar si solo usas pageLocation
+            'pageTitle': document.title,
+            'referrer': document.referrer // Añadido el referrer
         });
     </script>
     <script src="https://cdn.tailwindcss.com"></script>
