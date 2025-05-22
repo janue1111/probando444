@@ -159,6 +159,7 @@
       #mlb2-24087739.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent {
         text-align: left;
         margin: 0 0 20px 0;
+        word-break: break-word;
       }
       #mlb2-24087739.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent h4,
       #mlb2-24087739.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent h4 {
@@ -224,7 +225,7 @@
         width: 100%;
       }
       #mlb2-24087739.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-formContent,
-      #mlb2-24087739.ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow {
+      #mlb2-24087739.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow {
         margin: 0 0 20px 0;
         width: 100%;
       }
@@ -522,7 +523,7 @@
         font-weight: 700;
         line-height: 20px;
         margin: 0 !important;
-        padding: 10px !important;
+        padding: 16px 40px !important; /* Padding actualizado */
         width: 100%;
         height: auto;
       }
@@ -593,7 +594,7 @@
         font-weight: 700 !important;
         line-height: 21px !important;
         height: auto;
-        padding: 10px !important;
+        padding: 16px 40px !important; /* Padding actualizado */
         width: 100% !important;
         box-sizing: border-box !important;
       }
@@ -679,17 +680,18 @@
 
             <div class="hidden md:flex items-center">
                  <button id="header-agendar-button"
-                         class="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2 px-4 rounded-lg text-sm transition duration-300 ml-8">
+                         class="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-4 px-10 rounded-lg text-sm transition duration-300 ml-8">
                      Agendar Llamada
                  </button>
             </div>
-            <div class="w-[48px] md:hidden"></div> </nav>
+            <div class="w-[48px] md:hidden"></div>
+        </nav>
         <div id="mobile-menu" class="md:hidden hidden bg-white py-2 border-t border-gray-200">
             <a href="#" class="block px-6 py-2 text-gray-500 hover:bg-gray-100 hover:text-purple-600 text-sm">Servicios</a>
             <a href="#" class="block px-6 py-2 text-gray-500 hover:bg-gray-100 hover:text-purple-600 text-sm">Metodología</a>
             <a href="#" class="block px-6 py-2 text-gray-500 hover:bg-gray-100 hover:text-purple-600 text-sm">Preguntas y Respuestas</a>
             <button id="mobile-agendar-button"
-                     class="block w-full text-left px-6 py-2 text-gray-500 hover:bg-gray-100 hover:text-purple-600 text-sm">
+                     class="block w-full text-left py-4 px-10 text-gray-500 hover:bg-gray-100 hover:text-purple-600 text-sm">
                  Agendar Llamada
              </button>
         </div>
@@ -704,7 +706,7 @@
                 Recursos bíblicos creativos y prácticos para iglesias, padres y maestros.
             </p>
             <button id="open-modal-button-hero"
-               class="bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-8 rounded-lg text-lg transition duration-300 inline-block">
+               class="bg-purple-600 hover:bg-purple-700 text-white font-semibold py-4 px-10 rounded-lg text-lg transition duration-300 inline-block">
                 ¡QUIERO ACCESO AHORA!
             </button>
         </div>
@@ -712,40 +714,42 @@
 
     <section id="video-section" class="py-8 bg-gray-100">
         <div class="container mx-auto px-6">
-            <div style="padding:56.22% 0 0 0;position:relative; max-width: 700px; margin: 0 auto;"> <iframe src="https://player.vimeo.com/video/1082687535?h=d7e1a100ed&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+            <div style="padding:56.22% 0 0 0;position:relative; max-width: 700px; margin: 0 auto;">
+                <iframe src="https://player.vimeo.com/video/1082687535?h=d7e1a100ed&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
                          frameborder="0"
                          allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
                          style="position:absolute;top:0;left:0;width:100%;height:100%;"
-                         title="(ENLAZO PAGINA)2DA PARTE DE COMO SUBIR WEB">
-                </iframe> </div>
-            <script src="https://player.vimeo.com/api/player.js"></script>
+                         title="Video de presentación del servicio de tracking avanzado">
+                </iframe>
             </div>
+            <script src="https://player.vimeo.com/api/player.js"></script>
+        </div>
     </section>
 
     <section id="beneficios-server-side" class="py-16 bg-white">
         <div class="container mx-auto px-6 text-center">
-            <h1 class="text-4xl md:text-5xl font-bold mb-8 text-gray-800">4 razones para medir desde el servidor</h1>
+            <h2 class="text-4xl md:text-5xl font-bold mb-8 text-gray-800">4 razones para medir desde el servidor</h2>
             <ul class="max-w-3xl mx-auto text-left space-y-6 text-gray-700 list-disc pl-6">
                 <li>
-                    <h2 class="text-xl font-semibold mb-2 text-purple-600">Mayor precisión y control de datos</h2>
+                    <h3 class="text-xl font-semibold mb-2 text-purple-600">Mayor precisión y control de datos</h3>
                     <p>GTM Server-Side permite procesar los datos directamente en un servidor intermedio antes de enviarlos a plataformas de terceros, lo que reduce errores de recopilación y aumenta la precisión de los datos. Esto es fundamental en el comercio electrónico, donde las decisiones basadas en datos influyen directamente en las estrategias de ventas y marketing.</p>
                 </li>
                 <li>
-                    <h2 class="text-xl font-semibold mb-2 text-purple-600">Rendimiento optimizado del sitio</h2>
+                    <h3 class="text-xl font-semibold mb-2 text-purple-600">Rendimiento optimizado del sitio</h3>
                     <p>Al trasladar el procesamiento de etiquetas al servidor, la carga en el navegador del usuario se reduce significativamente. Esto da como resultado páginas que se cargan más rápido, lo que puede mejorar la experiencia del usuario, aumentar las tasas de conversión y beneficiar el SEO de la tienda en línea.</p>
                 </li>
                 <li>
-                    <h2 class="text-xl font-semibold mb-2 text-purple-600">Flexibilidad y escalabilidad</h2>
+                    <h3 class="text-xl font-semibold mb-2 text-purple-600">Flexibilidad y escalabilidad</h3>
                     <p>Una configuración desde el servidor ofrece mayor flexibilidad para personalizar y modificar eventos y variables sin afectar directamente el diseño del sitio. Esta capacidad de adaptación hace que la solución sea escalable para operaciones de comercio electrónico de distintos tamaños, ayudando a seguir el crecimiento de la tienda e integrar nuevas herramientas y plataformas según sea necesario.</p>
                 </li>
                 <li>
-                    <h2 class="text-xl font-semibold mb-2 text-purple-600">Reducción de bloqueos por ad blockers y mitigación de las restricciones del ITP</h2>
+                    <h3 class="text-xl font-semibold mb-2 text-purple-600">Reducción de bloqueos por ad blockers y mitigación de las restricciones del ITP</h3>
                     <p>En el modelo server-side, los datos se envían desde el servidor, evitando bloqueos comunes de ad blockers y otras tecnologías que dificultan la recopilación de datos en el navegador. Además, una configuracion desde el servidor ayuda a mitigar las restricciones impuestas por navegadores como Safari con el ITP, que limita la duración de los cookies primarios y afecta el seguimiento y la personalización. Al usar GTM Server-Side, es posible extender la vida útil de los cookies y preservar la eficacia del seguimiento, asegurando un mejor monitoreo del comportamiento del usuario a lo largo del tiempo.</p>
                 </li>
             </ul>
             <div class="text-center mt-12">
                 <button id="open-modal-button-beneficios"
-                        class="bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-8 rounded-lg text-lg transition duration-300 inline-block">
+                        class="bg-purple-600 hover:bg-purple-700 text-white font-semibold py-4 px-10 rounded-lg text-lg transition duration-300 inline-block">
                     Agendar Llamada
                 </button>
             </div>
@@ -754,25 +758,21 @@
 
     <section id="configuracion-esencial" class="py-16 bg-gray-100">
         <div class="container mx-auto px-6 text-center">
-            <h1 class="text-3xl font-bold mb-8 text-purple-600">Configuración esencial</h1>
-            <div class="flex flex-col md:flex-row items-center justify-center gap-12">
-                <div class="md:w-1/2">
+            <h1 class="text-3xl font-bold mb-8 text-gray-800">Configuración esencial</h1>
+            <div class="flex flex-col items-center justify-center">
+                <div class="w-full md:w-1/2 lg:w-1/3 mb-6">
                      <img
-                        src="https://i.imgur.com/GTYboAL.png"
-                        alt="Configuración Esencial"
+                        src="https://i.imgur.com/94SCjBs.png"
+                        alt="Imagen representativa de la Configuración Esencial"
                         class="rounded-lg shadow-lg mx-auto"
                         onerror="this.onerror=null; this.src='https://placehold.co/600x400/cccccc/ffffff?text=Error+Imagen'"
                      />
                 </div>
-                <div class="md:w-1/2 text-left">
-                    <p class="text-lg mb-4">Somos un ministerio apasionado por equipar a la iglesia y a las familias para discipular a la próxima generación. Creemos que la Biblia es la Palabra de Dios y tiene el poder de transformar vidas.</p>
-                    <p class="text-lg">Ofrecemos materiales didácticos, capacitación y acompañamiento para que la enseñanza bíblica sea efectiva, relevante y divertida para los niños.</p>
-                </div>
             </div>
-             <div class="text-center mt-12">
-                <button id="open-modal-button-config-esencial"
-                        class="bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-8 rounded-lg text-lg transition duration-300 inline-block">
-                    Agendar Llamada
+             <div class="text-center mt-6">
+                <button
+                        class="bg-purple-600 hover:bg-purple-700 text-white font-semibold py-4 px-10 rounded-lg text-lg transition duration-300 inline-block">
+                    CONOCE MÁS SOBRE ESTE SERVICIO
                 </button>
             </div>
         </div>
@@ -780,27 +780,32 @@
 
     <section id="configuracion-avanzada" class="py-16 bg-white">
         <div class="container mx-auto px-6 text-center">
-             <h1 class="text-3xl font-bold mb-8 text-purple-600">Configuración avanzada</h1>
-            <div class="flex flex-col md:flex-row items-center justify-center gap-12">
-                <div class="md:w-1/2">
+             <h1 class="text-3xl font-bold mb-8 text-gray-800">Configuración avanzada</h1>
+            <div class="flex flex-col items-center justify-center">
+                <div class="w-full md:w-1/2 lg:w-1/3 mb-6">
                      <img
-                        src="https://i.imgur.com/GTYboAL.png"
-                        alt="Configuración Avanzada"
+                        src="https://i.imgur.com/CIE5e7D.png"
+                        alt="Imagen representativa de la Configuración Avanzada"
                         class="rounded-lg shadow-lg mx-auto"
                         onerror="this.onerror=null; this.src='https://placehold.co/600x400/cccccc/ffffff?text=Error+Imagen'"
                      />
                 </div>
-                <div class="md:w-1/2 text-left">
-                    <p class="text-lg mb-4">Este es el primer párrafo de la nueva sección. Puedes editar este texto para describir lo que ofrece esta parte de la página.</p>
-                    <p class="text-lg">Aquí puedes añadir un segundo párrafo con más detalles o información relevante para tus visitantes.</p>
-                </div>
+            </div>
+            <div class="text-center mt-6">
+                <button
+                        class="bg-purple-600 hover:bg-purple-700 text-white font-semibold py-4 px-10 rounded-lg text-lg transition duration-300 inline-block">
+                    CONOCE MÁS SOBRE ESTE SERVICIO
+                </button>
             </div>
         </div>
     </section>
-    <section id="faq-section" class="py-16 bg-white"> <div class="container mx-auto px-6">
+
+    <section id="faq-section" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
             <h2 class="text-3xl font-bold text-center mb-8 text-gray-800">Preguntas Frecuentes</h2>
             <div class="max-w-2xl mx-auto space-y-4">
-                <details class="bg-gray-100 shadow rounded-lg p-4"> <summary class="font-semibold text-lg cursor-pointer text-gray-800">Pregunta Frecuente 1?</summary>
+                <details class="bg-gray-100 shadow rounded-lg p-4">
+                    <summary class="font-semibold text-lg cursor-pointer text-gray-800">Pregunta Frecuente 1?</summary>
                     <p class="mt-2 text-gray-600">Respuesta a la pregunta frecuente 1. Aquí puedes detallar la información relevante.</p>
                 </details>
                 <details class="bg-gray-100 shadow rounded-lg p-4">
@@ -811,10 +816,12 @@
                     <summary class="font-semibold text-lg cursor-pointer text-gray-800">Pregunta Frecuente 3?</summary>
                     <p class="mt-2 text-gray-600">Respuesta a la pregunta frecuente 3. Asegúrate de abordar los puntos clave.</p>
                 </details>
-                </div>
+            </div>
         </div>
     </section>
-    <section id="recursos" class="py-16 bg-blue-50"> <div class="container mx-auto px-6 text-center">
+
+    <section id="recursos" class="py-16 bg-blue-50">
+        <div class="container mx-auto px-6 text-center">
             <h2 class="text-3xl font-bold mb-12 text-gray-800">Nuestros Recursos</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div class="bg-white p-6 rounded-lg shadow-lg transform hover:scale-105 transition duration-300">
@@ -862,6 +869,8 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div class="bg-gray-50 p-6 rounded-lg shadow-md flex flex-col">
                     <img src="https://placehold.co/150x200/e0e0e0/999999?text=Persona+Feliz+1" alt="Testimonio de Cliente Satisfecho 1" class="mx-auto mb-4 rounded w-32 h-40 object-cover" onerror="this.onerror=null; this.src='https://placehold.co/150x200/cccccc/ffffff?text=Error'" />
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2 text-center">María R. - Maestra de Escuela Dominical</h3>
+                    <p class="text-sm text-gray-600 text-center">"Los materiales de Escuela Bíblica Kids han revitalizado nuestras clases. ¡Son muy dinámicos!"</p>
                     </div>
                 <div class="bg-gray-50 p-6 rounded-lg shadow-md flex flex-col">
                     <img src="https://placehold.co/150x200/d0d0d0/999999?text=Persona+Feliz+2" alt="Testimonio de Cliente Satisfecho 2" class="mx-auto mb-4 rounded w-32 h-40 object-cover" onerror="this.onerror=null; this.src='https://placehold.co/150x200/cccccc/ffffff?text=Error'" />
@@ -879,11 +888,14 @@
 
     <section id="configuracion-avanzada-texto" class="py-16 bg-white">
         <div class="container mx-auto px-6">
-             <h2 class="text-3xl font-bold mb-8 text-gray-800 text-center">Configuracion avanzada</h2> <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
+             <h1 class="text-3xl font-bold mb-8 text-gray-800 text-center">Configuración avanzada</h1>
+             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
                 <div>
                      <img
-                        src="https://i.imgur.com/94SCjBs.png" alt="Configuración Avanzada"
-                        class="mx-auto rounded-lg shadow-md w-auto max-w-xs" onerror="this.onerror=null; this.src='https://placehold.co/300x400/cccccc/ffffff?text=Error+Imagen'"
+                        src="https://i.imgur.com/94SCjBs.png"
+                        alt="Configuración Avanzada con descripción"
+                        class="mx-auto rounded-lg shadow-md w-auto max-w-xs"
+                        onerror="this.onerror=null; this.src='https://placehold.co/300x400/cccccc/ffffff?text=Error+Imagen'"
                      />
                  </div>
                  <div>
@@ -950,105 +962,71 @@
 
     <div id="contact-modal" class="modal-overlay hidden">
         <div class="modal-content">
-            <span class="modal-close-button" id="close-modal-button">&times;</span> <div id="mlb2-24087739" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-24087739">
+            <span class="modal-close-button" id="close-modal-button">&times;</span>
+
+            <div id="mlb2-24087739" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-24087739">
               <div class="ml-form-align-center ">
                 <div class="ml-form-embedWrapper embedForm">
-
-
                   <div class="ml-form-embedBody ml-form-embedBodyDefault row-form">
-
                     <div class="ml-form-embedContent" style=" ">
-
                         <h4>Nos pondremos en contacto contigo</h4>
                         <p><strong>en menos de 24 horas&nbsp;para explicarte todos los detalles sobre el proceso de rastreo para tu pagina web. Completa correctamente el formulario a continuación y comencemos.</strong></p>
-
                     </div>
-
                     <form class="ml-block-form" action="https://assets.mailerlite.com/jsonp/1404722/forms/149863715614754623/subscribe" data-code="" method="post" target="_blank">
                       <div class="ml-form-formContent">
-
-
                           <div class="ml-form-fieldRow ">
                             <div class="ml-field-group ml-field-name">
-
                               <label>Nombre</label>
-
-
                               <input aria-label="name" type="text" class="form-control" data-inputmask="" name="fields[name]" placeholder="" autocomplete="given-name">
-                              </div>
-                          </div><div class="ml-form-fieldRow ">
-                            <div class="ml-field-group ml-field-email ml-validate-email ml-validate-required">
-
-                              <label>Email</label>
-
-
-                              <input aria-label="email" aria-required="true" type="email" class="form-control" data-inputmask="" name="fields[email]" placeholder="" autocomplete="email">
-                              </div>
-                          </div><div class="ml-form-fieldRow ">
-                            <div class="ml-field-group ml-field-phone ml-validate-required">
-
-                              <label>WhatsApp (con código del país)</label>
-
-
-                              <input aria-label="phone" aria-required="true" type="text" class="form-control" data-inputmask="" name="fields[phone]" placeholder="" autocomplete="">
-                              </div>
-                          </div><div class="ml-form-fieldRow ">
-                            <div class="ml-field-group ml-field-company ml-validate-required">
-
-                              <label>¿Cuál es tu creador de sitios web? Ejemplo: Shopify, WordPress, etc</label>
-
-
-                              <input aria-label="company" aria-required="true" type="text" class="form-control" data-inputmask="" name="fields[company]" placeholder="" autocomplete="">
-                              </div>
-                          </div><div class="ml-form-fieldRow ml-last-item">
-                            <div class="ml-field-group ml-field-country">
-
-                              <label>¿Cuál es la URL de tu pagina web?</label>
-
-
-                              <input aria-label="country" type="text" class="form-control" data-inputmask="" name="fields[country]" placeholder="" autocomplete="">
-                              </div>
+                            </div>
                           </div>
-
+                          <div class="ml-form-fieldRow ">
+                            <div class="ml-field-group ml-field-email ml-validate-email ml-validate-required">
+                              <label>Email</label>
+                              <input aria-label="email" aria-required="true" type="email" class="form-control" data-inputmask="" name="fields[email]" placeholder="" autocomplete="email">
+                            </div>
+                          </div>
+                          <div class="ml-form-fieldRow ">
+                            <div class="ml-field-group ml-field-phone ml-validate-required">
+                              <label>WhatsApp (con código del país)</label>
+                              <input aria-label="phone" aria-required="true" type="text" class="form-control" data-inputmask="" name="fields[phone]" placeholder="" autocomplete="">
+                            </div>
+                          </div>
+                          <div class="ml-form-fieldRow ">
+                            <div class="ml-field-group ml-field-company ml-validate-required">
+                              <label>¿Cuál es tu creador de sitios web? Ejemplo: Shopify, WordPress, etc</label>
+                              <input aria-label="company" aria-required="true" type="text" class="form-control" data-inputmask="" name="fields[company]" placeholder="" autocomplete="">
+                            </div>
+                          </div>
+                          <div class="ml-form-fieldRow ml-last-item">
+                            <div class="ml-field-group ml-field-country">
+                              <label>¿Cuál es la URL de tu pagina web?</label>
+                              <input aria-label="country" type="text" class="form-control" data-inputmask="" name="fields[country]" placeholder="" autocomplete="">
+                            </div>
+                          </div>
                       </div>
-
-
-
                       <input type="hidden" name="ml-submit" value="1">
-
                       <div class="ml-form-embedSubmit">
-
                           <button type="submit" class="primary">SOLICITAR CONTACTO</button>
-
                         <button disabled="disabled" style="display: none;" type="button" class="loading">
                           <div class="ml-form-embedSubmitLoad"></div>
                           <span class="sr-only">Loading...</span>
                         </button>
                       </div>
-
-
                       <input type="hidden" name="anticsrf" value="true">
                     </form>
                   </div>
-
                   <div class="ml-form-successBody row-success" style="display: none">
-
                     <div class="ml-form-successContent">
-
                         <h4>Thank you!</h4>
-
                           <p>You have successfully joined our subscriber list.</p>
-
                     </div>
-
                   </div>
                 </div>
               </div>
             </div>
-
         </div>
     </div>
-
 
     <footer class="bg-gray-800 text-white py-10">
         <div class="container mx-auto px-6 text-center">
@@ -1076,25 +1054,17 @@
             const mobileLinks = mobileMenu.querySelectorAll('a');
             mobileLinks.forEach(link => {
                 link.addEventListener('click', () => {
-                     // Solo ocultar el menú si el enlace no es el de agendar (que ahora abre el modal)
                      if (link.id !== 'mobile-agendar-button') {
-                         // Si es un enlace de navegación normal, ocultar el menú.
-                         // Esto previene que se oculte si el enlace es para una acción en la misma página (ej. #)
-                         // pero permite que se oculte si es un enlace real a otra sección o página.
                          if (!link.href.includes('#') || link.pathname !== window.location.pathname) {
-                            // Si es un enlace a otra página, no hacer nada aquí, la navegación se encargará.
                             return;
                          }
-                         // Si es un enlace a una sección de la misma página (ej. href="#recursos")
-                         // o un enlace simple href="#"
                          if (link.getAttribute('href') === '#' || link.href.endsWith('#')) {
-                            // Solo cerrar si el menú está visible y es un enlace simple #
                             if (!mobileMenu.classList.contains('hidden')) {
-                                 if (link.getAttribute('href') === '#') { // Cierra solo para href="#"
+                                 if (link.getAttribute('href') === '#') {
                                      mobileMenu.classList.add('hidden');
                                  }
                             }
-                            return; // No cerrar para enlaces a secciones como #recursos
+                            return;
                          }
                          mobileMenu.classList.add('hidden');
                      }
@@ -1106,245 +1076,166 @@
         document.addEventListener('DOMContentLoaded', function() {
             const modal = document.getElementById('contact-modal');
             const closeButton = document.getElementById('close-modal-button');
-            // Selecciona todos los botones que deben abrir el modal
-            // Se añade el nuevo ID del botón de beneficios y el de Configuracion esencial
-            const openButtons = document.querySelectorAll('#open-modal-button-hero, #open-modal-button-nueva-seccion, #open-modal-button-video-section, #open-modal-button-beneficios, #open-modal-button-config-esencial');
-            const headerAgendarButton = document.getElementById('header-agendar-button'); // Botón Agendar en el encabezado desktop
-            const mobileAgendarButton = document.getElementById('mobile-agendar-button'); // Botón Agendar en el menú móvil
+            const openButtons = document.querySelectorAll(
+                '#open-modal-button-hero, #open-modal-button-nueva-seccion, #open-modal-button-video-section, #open-modal-button-beneficios'
+            );
+            const headerAgendarButton = document.getElementById('header-agendar-button');
+            const mobileAgendarButton = document.getElementById('mobile-agendar-button');
 
 
-            // Función para abrir el modal
             function openModal() {
                 if (modal) modal.classList.remove('hidden');
-                 // DataLayer push para apertura de modal
-                dataLayer.push({
-                    'event': 'modal_opened',
-                    'event_category': 'Modal Interaction',
-                    'event_action': 'open',
-                    'event_label': 'Formulario Agendar Llamada'
-                });
             }
 
-            // Función para cerrar el modal
             function closeModal() {
                 if (modal) modal.classList.add('hidden');
-                // DataLayer push para cierre de modal
-                dataLayer.push({
-                    'event': 'modal_closed',
-                    'event_category': 'Modal Interaction',
-                    'event_action': 'close',
-                    'event_label': 'Formulario Agendar Llamada'
-                });
             }
 
-            // Event listeners para abrir el modal con los botones "Quiero Acceso Ahora" y el nuevo botón "Agendar Llamada"
             openButtons.forEach(button => {
                 if (button) button.addEventListener('click', openModal);
             });
 
-            // Event listener para abrir el modal con el botón "Agendar Llamada" en el encabezado desktop
              if (headerAgendarButton) {
                 headerAgendarButton.addEventListener('click', openModal);
              }
 
-            // Event listener para abrir el modal con el botón "Agendar Llamada" en el menú móvil
              if (mobileAgendarButton) {
                  mobileAgendarButton.addEventListener('click', function(event) {
-                     event.preventDefault(); // Previene el comportamiento por defecto si fuera un enlace
+                     event.preventDefault();
                      openModal();
-                     // Opcional: cierra el menú móvil al abrir el modal
                     if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
                         mobileMenu.classList.add('hidden');
                     }
                  });
              }
 
-
-            // Event listener para cerrar el modal con el botón de cerrar
             if (closeButton) {
                 closeButton.addEventListener('click', closeModal);
             }
 
-            // Event listener para cerrar el modal haciendo clic fuera del contenido del modal
             if (modal) {
                 modal.addEventListener('click', function(event) {
-                    if (event.target === modal) { // Si el clic fue directamente en el overlay
+                    if (event.target === modal) {
                         closeModal();
                     }
                 });
             }
 
-
-            // Scripts para enviar eventos al DataLayer (mantenemos los existentes y ajustamos los de navegación)
-            // Seguimiento del clic en el botón CTA principal de la sección Héroe (ahora abre modal)
-            const ctaHeroButton = document.getElementById('open-modal-button-hero'); // Usamos el nuevo ID del botón
+            // DataLayer Scripts
+            const ctaHeroButton = document.getElementById('open-modal-button-hero');
             if (ctaHeroButton) {
                 ctaHeroButton.addEventListener('click', function() {
                     dataLayer.push({
-                        'event': 'cta_click', // Nombre genérico del evento
-                        'event_category': 'CTA', // Categoría del evento
-                        'event_action': 'click_open_modal', // Acción realizada (abrir modal)
-                        'event_label': 'Hero - ¡QUIERO ACCESO AHORA!', // Etiqueta descriptiva
-                        // No hay link_url ya que abre modal, no navega
-                        'button_text': this.textContent.trim() // Texto del botón
+                        'event': 'cta_click',
+                        'event_category': 'CTA',
+                        'event_action': 'click',
+                        'event_label': 'Abrir Formulario - Hero',
+                        'button_text': this.textContent.trim()
                     });
                 });
             }
 
-            // Seguimiento del clic en el botón CTA de la "Nueva Sección" (ahora abre modal)
-            // Este ID no parece estar en uso actualmente, pero se mantiene la lógica por si se reutiliza.
             const ctaNuevaSeccionButton = document.getElementById('open-modal-button-nueva-seccion');
             if (ctaNuevaSeccionButton) {
                 ctaNuevaSeccionButton.addEventListener('click', function() {
                     dataLayer.push({
                         'event': 'cta_click',
                         'event_category': 'CTA',
-                        'event_action': 'click_open_modal',
-                        'event_label': 'Nueva Seccion - Agendar Llamada', // Asumiendo que es un botón de agendar
-                         // No hay link_url ya que abre modal, no navega
-                        'button_text': this.textContent.trim() // Texto del botón
-                    });
-                });
-            }
-
-            // Seguimiento del clic en el NUEVO botón "Agendar Llamada" en la sección de beneficios
-            const ctaBeneficiosButton = document.getElementById('open-modal-button-beneficios'); // Usamos el nuevo ID del botón
-            if (ctaBeneficiosButton) {
-                ctaBeneficiosButton.addEventListener('click', function() {
-                    dataLayer.push({
-                        'event': 'cta_click',
-                        'event_category': 'CTA',
-                        'event_action': 'click_open_modal',
-                        'event_label': 'Beneficios Server-Side - Agendar Llamada', // Etiqueta específica
+                        'event_action': 'click',
+                        'event_label': 'Abrir Formulario - Nueva Seccion',
                         'button_text': this.textContent.trim()
                     });
                 });
             }
 
-             // Seguimiento del clic en el NUEVO botón "Agendar Llamada" en la sección Configuracion esencial
-             const ctaConfigEsencialButton = document.getElementById('open-modal-button-config-esencial');
-             if (ctaConfigEsencialButton) {
-                 ctaConfigEsencialButton.addEventListener('click', function() {
-                     dataLayer.push({
-                         'event': 'cta_click',
-                         'event_category': 'CTA',
-                         'event_action': 'click_open_modal',
-                         'event_label': 'Configuracion Esencial - Agendar Llamada', // Etiqueta específica
-                         'button_text': this.textContent.trim()
-                     });
-                 });
-             }
+            const ctaBeneficiosButton = document.getElementById('open-modal-button-beneficios');
+            if (ctaBeneficiosButton) {
+                ctaBeneficiosButton.addEventListener('click', function() {
+                    dataLayer.push({
+                        'event': 'cta_click',
+                        'event_category': 'CTA',
+                        'event_action': 'click',
+                        'event_label': 'Abrir Formulario - Seccion Beneficios',
+                        'button_text': this.textContent.trim()
+                    });
+                });
+            }
 
-
-            // Seguimiento de clics en los enlaces "Ver más" de los recursos
             const resourceLinks = document.querySelectorAll('.resource-view-more-link');
             resourceLinks.forEach(link => {
                 link.addEventListener('click', function(event) {
-                    // event.preventDefault(); // Descomentar si no quieres que navegue inmediatamente
                     const resourceName = this.getAttribute('data-resource-name') || 'Desconocido';
                     dataLayer.push({
                         'event': 'resource_link_click',
                         'event_category': 'Recursos',
                         'event_action': 'click_ver_mas',
                         'event_label': resourceName,
-                        'link_url': this.href, // URL del enlace
-                        'link_text': this.textContent.trim() // Texto del enlace
+                        'link_url': this.href,
+                        'link_text': this.textContent.trim()
                     });
                 });
             });
 
-            // Seguimiento del clic en el enlace del anuncio nuevo
-            // Eliminado el seguimiento específico para el enlace del anuncio ya que se eliminó el enlace.
-
-
-            // Seguimiento de clics en los enlaces de la navegación principal (Servicios, Metodología, Preguntas y Respuestas)
-            const navLinks = document.querySelectorAll('header .hidden.md\\:flex a'); // Selecciona solo los enlaces en la nav principal desktop
+            const navLinks = document.querySelectorAll('header .hidden.md\\:flex a');
              navLinks.forEach(link => {
                 link.addEventListener('click', function() {
-                     // event.preventDefault(); // Descomentar si no quieres que navegue inmediatamente
                      dataLayer.push({
                         'event': 'navigation_click',
                         'event_category': 'Header Navigation',
-                        'event_action': 'click_link', // Acción genérica para clics en enlaces de navegación
-                        'event_label': this.textContent.trim(), // Texto del enlace (Servicios, Metodología, Preguntas y Respuestas)
-                        'link_url': this.href
+                        'event_action': 'click_link',
+                        'event_label': this.textContent.trim()
                      });
                 });
              });
 
-
-            // Seguimiento de clics en el botón "Agendar Llamada" en el encabezado desktop
              if (headerAgendarButton) {
                 headerAgendarButton.addEventListener('click', function() {
                      dataLayer.push({
-                        'event': 'cta_click', // Es un CTA para abrir el modal
+                        'event': 'cta_click',
                         'event_category': 'Header Navigation',
                         'event_action': 'click_agendar_open_modal',
-                        'event_label': this.textContent.trim(),
-                        'button_text': this.textContent.trim()
+                        'event_label': this.textContent.trim()
                      });
                 });
              }
 
-            // Seguimiento de clics en los enlaces/botones del menú móvil
-            const mobileNavItems = document.querySelectorAll('#mobile-menu a, #mobile-menu button'); // Selecciona enlaces y botones en el menú móvil
+            const mobileNavItems = document.querySelectorAll('#mobile-menu a, #mobile-menu button');
             mobileNavItems.forEach(item => {
                 item.addEventListener('click', function() {
-                    // event.preventDefault(); // Descomentar si no quieres que navegue inmediatamente o se ejecute la acción del botón
                     let eventLabel = this.textContent.trim();
-                    let eventAction = 'click_link'; // Por defecto para enlaces
-                    let linkUrl = this.href; // Para enlaces
-
-                    if (this.tagName.toLowerCase() === 'button') { // Si es un botón
-                        eventAction = 'click_agendar_open_modal'; // Acción específica para el botón de agendar
-                        linkUrl = undefined; // Los botones no tienen href de navegación
-                    }
+                    let eventAction = (this.tagName === 'BUTTON') ? 'click_agendar_open_modal' : 'click_link';
 
                     dataLayer.push({
-                       'event': this.tagName.toLowerCase() === 'button' ? 'cta_click' : 'navigation_click',
+                       'event': (this.tagName === 'BUTTON') ? 'cta_click' : 'navigation_click',
                        'event_category': 'Mobile Navigation',
                        'event_action': eventAction,
                        'event_label': eventLabel,
-                       'link_url': linkUrl, // Solo se envía si es un enlace
-                       'button_text': this.tagName.toLowerCase() === 'button' ? this.textContent.trim() : undefined // Solo se envía si es un botón
                     });
                 });
             });
 
-
-            // La función ml_webform_success_24087739 es proporcionada por el script de MailerLite
-            // y se ejecuta al enviar el formulario con éxito.
-            // Puedes añadir tu push a DataLayer aquí si quieres rastrear envíos exitosos de MailerLite.
-            // Asegúrate de que esta función esté definida globalmente o accesible en este scope.
-            window.ml_webform_success_24087739 = function() { // Asegura que sea global
+            function ml_webform_success_24087739() {
                 try {
-                    // Intenta redirigir la ventana principal si está en un iframe
                     window.top.location.href = 'https://proband13132.blogspot.com/2025/03/pagina-de-gracias.html';
                   } catch (e) {
-                    // Si falla (por ejemplo, por restricciones de cross-origin), redirige la ventana actual
                     window.location.href = 'https://proband13132.blogspot.com/2025/03/pagina-de-gracias.html';
                   }
-                // Push a DataLayer para rastrear envíos exitosos del formulario de MailerLite
                 dataLayer.push({
-                    'event': 'form_submission_success',
-                    'event_category': 'Formulario Contacto',
-                    'event_action': 'submit_mailerlite',
-                    'event_label': 'Formulario Agendar Llamada - Éxito',
-                    'form_id': 'mlb2-24087739' // ID del formulario de MailerLite
+                    'event': 'mailerlite_form_success',
+                    'event_category': 'Contacto',
+                    'event_action': 'submit_success',
+                    'event_label': 'Formulario Agendar Llamada - MailerLite',
                 });
-            };
-
-
+            }
+            window.ml_webform_success_24087739 = ml_webform_success_24087739;
         });
 
     </script>
 
     <script src="https://groot.mailerlite.com/js/w/webforms.min.js?v176e10baa5e7ed80d35ae235be3d5024" type="text/javascript"></script>
     <script>
-        // Este fetch es parte de la configuración de MailerLite, se mantiene como está.
         fetch("https://assets.mailerlite.com/jsonp/1404722/forms/149863715614754623/takel")
     </script>
-
 
 </body>
 </html>
