@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Jeraoo</title> <script>
+    <title>Jeraoo</title>
+    <script>
         // Configuración inicial del DataLayer
         window.dataLayer = window.dataLayer || [];
         dataLayer.push({
@@ -769,7 +770,7 @@
                 </div>
             </div>
              <div class="text-center mt-6">
-                <button
+                <button id="essential-config-button"
                         class="bg-purple-600 hover:bg-purple-700 text-white font-semibold py-4 px-10 rounded-lg text-lg transition duration-300 inline-block">
                     CONOCE MÁS SOBRE ESTE SERVICIO
                 </button>
@@ -1080,6 +1081,7 @@
             );
             const headerAgendarButton = document.getElementById('header-agendar-button');
             const mobileAgendarButton = document.getElementById('mobile-agendar-button');
+            const essentialConfigButton = document.getElementById('essential-config-button'); // Nuevo botón
 
 
             function openModal() {
@@ -1157,6 +1159,20 @@
                         'event_label': 'Abrir Formulario - Seccion Beneficios',
                         'button_text': this.textContent.trim()
                     });
+                });
+            }
+
+            // Evento para el botón "CONOCE MÁS SOBRE ESTE SERVICIO" en Configuración esencial
+            if (essentialConfigButton) {
+                essentialConfigButton.addEventListener('click', function() {
+                    dataLayer.push({
+                        'event': 'service_details_click',
+                        'event_category': 'Servicios',
+                        'event_action': 'click_conoce_mas',
+                        'event_label': 'Configuración Esencial',
+                        'button_text': this.textContent.trim()
+                    });
+                    window.location.href = 'index2.html'; // Redirige a index2.html
                 });
             }
 
