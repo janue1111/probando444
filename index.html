@@ -136,10 +136,10 @@
       #mlb2-24087739.ml-form-embedContainer .ml-form-embedWrapper.embedPopup,
       #mlb2-24087739.ml-form-embedContainer .ml-form-embedWrapper.embedDefault { width: 400px; }
       #mlb2-24087739.ml-form-embedContainer .ml-form-embedWrapper.embedForm { max-width: 400px; width: 100%; }
-      #mlb2-24087739.ml-form-embedContainer .ml-form-align-left { text-align: left; }
-      #mlb2-24087739.ml-form-embedContainer .ml-form-align-center { text-align: center; }
-      #mlb2-24087739.ml-form-embedContainer .ml-form-align-default { display: table-cell !important; vertical-align: middle !important; text-align: center !important; }
-      #mlb2-24087739.ml-form-embedContainer .ml-form-align-right { text-align: right; }
+      #mlb2-24087739.ml-form-align-left { text-align: left; }
+      #mlb2-24087739.ml-form-align-center { text-align: center; }
+      #mlb2-24087739.ml-form-align-default { display: table-cell !important; vertical-align: middle !important; text-align: center !important; }
+      #mlb2-24087739.ml-form-align-right { text-align: right; }
       #mlb2-24087739.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedHeader img {
         border-top-left-radius: 23px; /* Borde redondeado actualizado */
         border-top-right-radius: 23px; /* Borde redondeado actualizado */
@@ -675,7 +675,7 @@
             </div>
 
             <div class="text-2xl text-gray-900 tracking-tight absolute left-1/2 transform -translate-x-1/2 md:static md:translate-x-0" style="font-family: 'Montserrat', sans-serif; font-weight: 800;">
-                 <a href="#">Je<span class="text-purple-600">raoo</span></a>
+                 <a href="#">Je<span class="text-purple-600">raao</span></a>
             </div>
 
             <div class="hidden md:flex items-center">
@@ -983,7 +983,7 @@
                           <div class="ml-form-fieldRow ">
                             <div class="ml-field-group ml-field-email ml-validate-email ml-validate-required">
                               <label>Email</label>
-                              <input aria-label="email" aria-required="true" type="email" class="form-control" data-inputmask="" name="fields[email]" placeholder="" autocomplete="email">
+                              <input aria-label="email" aria-required="true" type="email" class="form-control" data-inputmask="" name="fields[email]" placeholder="" autocomplete="">
                             </div>
                           </div>
                           <div class="ml-form-fieldRow ">
@@ -1081,7 +1081,7 @@
             );
             const headerAgendarButton = document.getElementById('header-agendar-button');
             const mobileAgendarButton = document.getElementById('mobile-agendar-button');
-            const essentialConfigButton = document.getElementById('essential-config-button'); // Nuevo botón
+            const essentialConfigButton = document.getElementById('essential-config-button'); // Botón de Configuración esencial
 
 
             function openModal() {
@@ -1172,7 +1172,7 @@
                         'event_label': 'Configuración Esencial',
                         'button_text': this.textContent.trim()
                     });
-                    window.location.href = 'index2.html'; // Redirige a index2.html
+                    window.location.href = 'servicioesencial.html'; // Redirige a servicioesencial.html
                 });
             }
 
