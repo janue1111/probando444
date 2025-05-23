@@ -5,45 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jeraoo</title>
     <script>
-        // Initial DataLayer configuration
+        // Configuración inicial del DataLayer
         window.dataLayer = window.dataLayer || [];
         dataLayer.push({
-            'event': 'pageView', // Page view event
-            'pageLocation': window.location.href, // Full page URL
-            'pagePath': window.location.pathname, // Page path
-            'pageTitle': document.title, // Page title
-            'referrer': document.referrer // Referrer page
+            'event': 'pageView', // Evento de vista de página
+            'pageLocation': window.location.href, // URL completa de la página
+            'pagePath': window.location.pathname, // Ruta de la página
+            'pageTitle': document.title, // Título de la página
+            'referrer': document.referrer // Página de referencia
         });
     </script>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
     <style>
-        /* Main font style */
+        /* Estilo de fuente principal */
         body {
             font-family: 'Inter', sans-serif;
         }
-        /* Styles for the pop-up (modal) */
+        /* Estilos para el pop-up (modal) */
         .modal-overlay {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent dark background */
+            background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro semi-transparente */
             display: flex;
             justify-content: center;
             align-items: center;
-            z-index: 1000; /* Ensures it's above other elements */
+            z-index: 1000; /* Asegura que esté por encima de otros elementos */
         }
         .modal-content {
-            background-color: #fff; /* White background for modal content */
+            background-color: #fff; /* Fondo blanco para el contenido del modal */
             padding: 2rem;
             border-radius: 0.5rem;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Shadow */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Sombra */
             position: relative;
-            max-width: 90%; /* Width adjustment for small screens */
-            max-height: 90%; /* Height adjustment for small screens */
-            overflow-y: auto; /* Allows scrolling if content is too long */
+            max-width: 90%; /* Ajuste de ancho para pantallas pequeñas */
+            max-height: 90%; /* Ajuste de altura para pantallas pequeñas */
+            overflow-y: auto; /* Permite scroll si el contenido es muy largo */
         }
         .modal-close-button {
             position: absolute;
@@ -51,14 +51,14 @@
             right: 1rem;
             font-size: 1.5rem;
             cursor: pointer;
-            color: #aaa; /* Close icon color */
+            color: #aaa; /* Color del icono de cerrar */
         }
-         /* Class to hide elements */
+         /* Clase para ocultar elementos */
          .hidden {
             display: none;
         }
 
-        /* MailerLite styles (imported) */
+        /* Estilos de MailerLite (importados) */
         @import url("https://assets.mlcdn.com/fonts.css?version=1747380");</style>
     <style type="text/css">
     /* LOADER */
@@ -125,7 +125,7 @@
 
         border-width: 0px;
         border-color: transparent;
-        border-radius: 23px; /* Updated rounded border */
+        border-radius: 23px; /* Borde redondeado actualizado */
         border-style: solid;
         box-sizing: border-box;
         display: inline-block !important;
@@ -141,8 +141,8 @@
       #mlb2-24087739.ml-form-align-default { display: table-cell !important; vertical-align: middle !important; text-align: center !important; }
       #mlb2-24087739.ml-form-align-right { text-align: right; }
       #mlb2-24087739.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedHeader img {
-        border-top-left-radius: 23px; /* Updated rounded border */
-        border-top-right-radius: 23px; /* Updated rounded border */
+        border-top-left-radius: 23px; /* Borde redondeado actualizado */
+        border-top-right-radius: 23px; /* Borde redondeado actualizado */
         height: auto;
         margin: 0 auto !important;
         max-width: 100%;
@@ -514,16 +514,16 @@
         border-color: #000000;
         border-style: solid;
         border-width: 1px;
-        border-radius: 13px; /* Updated rounded border */
+        border-radius: 13px; /* Borde redondeado actualizado */
         box-shadow: none;
         color: #ffffff !important;
         cursor: pointer;
-        font-family: 'Montserrat', sans-serif; /* Updated font */
-        font-size: 20px !important; /* Updated font size */
+        font-family: 'Montserrat', sans-serif; /* Fuente actualizada */
+        font-size: 20px !important; /* Tamaño de fuente actualizado */
         font-weight: 700;
         line-height: 20px;
         margin: 0 !important;
-        padding: 16px 40px !important; /* Updated padding */
+        padding: 16px 40px !important; /* Padding actualizado */
         width: 100%;
         height: auto;
       }
@@ -585,16 +585,16 @@
       #mlb2-24087739.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit button {
         background-color: #000000 !important;
         border: none !important;
-        border-radius: 13px !important; /* Updated rounded border */
+        border-radius: 13px !important; /* Borde redondeado actualizado */
         box-shadow: none !important;
         color: #ffffff !important;
         cursor: pointer;
-        font-family: 'Montserrat', sans-serif !important; /* Updated font */
-        font-size: 20px !important; /* Updated font size */
+        font-family: 'Montserrat', sans-serif !important; /* Fuente actualizada */
+        font-size: 20px !important; /* Tamaño de fuente actualizado */
         font-weight: 700 !important;
         line-height: 21px !important;
         height: auto;
-        padding: 16px 40px !important; /* Updated padding */
+        padding: 16px 40px !important; /* Padding actualizado */
         width: 100% !important;
         box-sizing: border-box !important;
       }
@@ -622,7 +622,7 @@
 
       .ml-error .custom-checkbox-radio-list {
         border: 1px solid red !important;
-        border-radius: 23px; /* Updated rounded border */
+        border-radius: 23px; /* Borde redondeado actualizado */
         padding: 10px;
       }
 
@@ -758,7 +758,7 @@
 
     <section id="configuracion-esencial" class="py-16 bg-gray-100">
         <div class="container mx-auto px-6 text-center">
-            <h1 class="text-3xl font-bold mb-8 text-gray-800">Configuración esencial</h1>
+            <h1 class="text-3xl font-bold mb-8 text-gray-800">TRACKING ESENCIAL</h1>
             <div class="flex flex-col items-center justify-center">
                 <div class="w-full md:w-1/2 lg:w-1/3 mb-6">
                      <img
@@ -772,7 +772,7 @@
              <div class="text-center mt-6">
                 <button id="essential-config-button"
                         class="bg-purple-600 hover:bg-purple-700 text-white font-semibold py-4 px-10 rounded-lg text-lg transition duration-300 inline-block">
-                    CONOCE MÁS SOBRE ESTE SERVICIO
+                    Tracking esencial(aquí)
                 </button>
             </div>
         </div>
@@ -780,7 +780,7 @@
 
     <section id="configuracion-avanzada" class="py-16 bg-white">
         <div class="container mx-auto px-6 text-center">
-             <h1 class="text-3xl font-bold mb-8 text-gray-800">Configuración avanzada</h1>
+             <h1 class="text-3xl font-bold mb-8 text-gray-800">TRACKING AVANZADO</h1>
             <div class="flex flex-col items-center justify-center">
                 <div class="w-full md:w-1/2 lg:w-1/3 mb-6">
                      <img
@@ -792,9 +792,9 @@
                 </div>
             </div>
             <div class="text-center mt-6">
-                <button id="advanced-config-button"
+                <button
                         class="bg-purple-600 hover:bg-purple-700 text-white font-semibold py-4 px-10 rounded-lg text-lg transition duration-300 inline-block">
-                    CONOCE MÁS SOBRE ESTE SERVICIO
+                    Tracking avanzado(aquí)
                 </button>
             </div>
         </div>
@@ -888,7 +888,7 @@
 
     <section id="configuracion-avanzada-texto" class="py-16 bg-white">
         <div class="container mx-auto px-6">
-             <h1 class="text-3xl font-bold mb-8 text-gray-800 text-center">Configuración avanzada</h1>
+             <h1 class="text-3xl font-bold mb-8 text-gray-800 text-center">TRACKING AVANZADO</h1>
              <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
                 <div>
                      <img
@@ -1041,16 +1041,16 @@
     </footer>
 
     <script>
-        // Script to control the mobile menu
+        // Script para controlar el menú móvil
         const mobileMenuButton = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
 
         if (mobileMenuButton && mobileMenu) {
             mobileMenuButton.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden'); // Show or hide the menu
+                mobileMenu.classList.toggle('hidden'); // Muestra u oculta el menú
             });
 
-            // Close the mobile menu when clicking a link (except the one that opens the modal)
+            // Cierra el menú móvil al hacer clic en un enlace (excepto el de agendar que abre modal)
             const mobileLinks = mobileMenu.querySelectorAll('a');
             mobileLinks.forEach(link => {
                 link.addEventListener('click', () => {
@@ -1072,7 +1072,7 @@
             });
         }
 
-        // Scripts for the contact form pop-up
+        // Scripts para el pop-up del formulario de contacto
         document.addEventListener('DOMContentLoaded', function() {
             const modal = document.getElementById('contact-modal');
             const closeButton = document.getElementById('close-modal-button');
@@ -1081,8 +1081,8 @@
             );
             const headerAgendarButton = document.getElementById('header-agendar-button');
             const mobileAgendarButton = document.getElementById('mobile-agendar-button');
-            const essentialConfigButton = document.getElementById('essential-config-button'); // Essential Configuration Button
-            const advancedConfigButton = document.getElementById('advanced-config-button'); // Advanced Configuration Button
+            const essentialConfigButton = document.getElementById('essential-config-button'); // Botón de Configuración esencial
+
 
             function openModal() {
                 if (modal) modal.classList.remove('hidden');
@@ -1162,7 +1162,7 @@
                 });
             }
 
-            // Event for the "CONOCE MÁS SOBRE ESTE SERVICIO" button in Essential Configuration
+            // Evento para el botón "CONOCE MÁS SOBRE ESTE SERVICIO" en Configuración esencial
             if (essentialConfigButton) {
                 essentialConfigButton.addEventListener('click', function() {
                     dataLayer.push({
@@ -1172,21 +1172,7 @@
                         'event_label': 'Configuración Esencial',
                         'button_text': this.textContent.trim()
                     });
-                    window.location.href = 'esencial/'; // Redirect to esencial/
-                });
-            }
-
-            // Event for the "CONOCE MÁS SOBRE ESTE SERVICIO" button in Advanced Configuration
-            if (advancedConfigButton) {
-                advancedConfigButton.addEventListener('click', function() {
-                    dataLayer.push({
-                        'event': 'service_details_click',
-                        'event_category': 'Servicios',
-                        'event_action': 'click_conoce_mas',
-                        'event_label': 'Configuración Avanzada',
-                        'button_text': this.textContent.trim()
-                    });
-                    window.location.href = 'avanzado/'; // Redirect to avanzado/
+                    window.location.href = 'esencial/'; // Redirige a esencial/
                 });
             }
 
