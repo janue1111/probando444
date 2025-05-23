@@ -792,7 +792,7 @@
                 </div>
             </div>
             <div class="text-center mt-6">
-                <button
+                <button id="advanced-config-button"
                         class="bg-purple-600 hover:bg-purple-700 text-white font-semibold py-4 px-10 rounded-lg text-lg transition duration-300 inline-block">
                     Tracking avanzado(aquí)
                 </button>
@@ -1082,6 +1082,7 @@
             const headerAgendarButton = document.getElementById('header-agendar-button');
             const mobileAgendarButton = document.getElementById('mobile-agendar-button');
             const essentialConfigButton = document.getElementById('essential-config-button'); // Botón de Configuración esencial
+            const advancedConfigButton = document.getElementById('advanced-config-button'); // Nuevo botón de Configuración avanzada
 
 
             function openModal() {
@@ -1162,7 +1163,7 @@
                 });
             }
 
-            // Evento para el botón "CONOCE MÁS SOBRE ESTE SERVICIO" en Configuración esencial
+            // Evento para el botón "Tracking esencial(aquí)"
             if (essentialConfigButton) {
                 essentialConfigButton.addEventListener('click', function() {
                     dataLayer.push({
@@ -1173,6 +1174,20 @@
                         'button_text': this.textContent.trim()
                     });
                     window.location.href = 'esencial/'; // Redirige a esencial/
+                });
+            }
+
+            // Evento para el botón "Tracking avanzado(aquí)"
+            if (advancedConfigButton) {
+                advancedConfigButton.addEventListener('click', function() {
+                    dataLayer.push({
+                        'event': 'service_details_click',
+                        'event_category': 'Servicios',
+                        'event_action': 'click_conoce_mas',
+                        'event_label': 'Configuración Avanzada',
+                        'button_text': this.textContent.trim()
+                    });
+                    window.location.href = 'avanzado/'; // Redirige a avanzado/
                 });
             }
 
