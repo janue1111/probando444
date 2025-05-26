@@ -690,7 +690,7 @@
             <a href="#" class="block px-6 py-2 text-gray-500 hover:bg-gray-100 hover:text-purple-600 text-sm">Metodología</a>
             <a href="#" class="block px-6 py-2 text-gray-500 hover:bg-gray-100 hover:text-purple-600 text-sm">Preguntas y Respuestas</a>
             <button id="mobile-agendar-button"
-                     class="block w-full text-left py-4 px-10 text-gray-500 hover:bg-gray-100 hover:text-purple-600 text-sm">
+                     class="block w-full text-left py-4 px-10 text-orange-500 hover:bg-gray-100 hover:text-orange-600 text-sm">
                  Agendar Llamada
              </button>
         </div>
@@ -705,7 +705,7 @@
                 Mejora tus resultados de tu tienda online con seguimiento 100% configurado por GTM Client y principalmente por GTM Server Side (sGTM)
             </p>
             <button id="open-modal-button-hero"
-               class="bg-purple-600 hover:bg-purple-700 text-white font-semibold py-4 px-10 rounded-lg text-lg transition duration-300 inline-block">
+               class="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-4 px-10 rounded-lg text-lg transition duration-300 inline-block">
                 ¡QUIERO ACCESO AHORA!
             </button>
         </div>
@@ -748,16 +748,16 @@
             </ul>
             <div class="text-center mt-12">
                 <button id="open-modal-button-beneficios"
-                        class="bg-purple-600 hover:bg-purple-700 text-white font-semibold py-4 px-10 rounded-lg text-lg transition duration-300 inline-block">
+                        class="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-4 px-10 rounded-lg text-lg transition duration-300 inline-block">
                     Agendar Llamada
                 </button>
             </div>
         </div>
     </section>
 
-    <section id="configuracion-avanzada" class="py-16 bg-gray-100">
+    <section id="configuracion-avanzada" class="py-16 bg-purple-600 text-white">
         <div class="container mx-auto px-6 text-center">
-             <h1 class="text-3xl font-bold mb-8 text-gray-800">TRACKING AVANZADO</h1>
+             <h1 class="text-3xl font-bold mb-8">TRACKING AVANZADO</h1>
             <div class="flex flex-col items-center justify-center">
                 <div class="w-full md:w-1/2 lg:w-1/3 mb-6">
                      <img
@@ -770,16 +770,16 @@
             </div>
             <div class="text-center mt-6">
                 <button id="advanced-config-button"
-                        class="bg-purple-600 hover:bg-purple-700 text-white font-semibold py-4 px-10 rounded-lg text-lg transition duration-300 inline-block">
+                        class="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-4 px-10 rounded-lg text-lg transition duration-300 inline-block">
                     Tracking avanzado(aquí)
                 </button>
             </div>
         </div>
     </section>
 
-    <section id="configuracion-esencial" class="py-16 bg-white">
+    <section id="configuracion-esencial" class="py-16 bg-purple-600 text-white">
         <div class="container mx-auto px-6 text-center">
-            <h1 class="text-3xl font-bold mb-8 text-gray-800">TRACKING ESENCIAL</h1>
+            <h1 class="text-3xl font-bold mb-8">TRACKING ESENCIAL</h1>
             <div class="flex flex-col items-center justify-center">
                 <div class="w-full md:w-1/2 lg:w-1/3 mb-6">
                      <img
@@ -792,7 +792,7 @@
             </div>
              <div class="text-center mt-6">
                 <button id="essential-config-button"
-                        class="bg-purple-600 hover:bg-purple-700 text-white font-semibold py-4 px-10 rounded-lg text-lg transition duration-300 inline-block">
+                        class="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-4 px-10 rounded-lg text-lg transition duration-300 inline-block">
                     Tracking esencial(aquí)
                 </button>
             </div>
@@ -810,7 +810,7 @@
                 Pregúntame sin ningún compromiso.
             </p>
             <div class="text-center mt-6">
-                <a href="https://wa.me/XXXXXXXXXXX" target="_blank" class="inline-flex items-center justify-center bg-green-500 hover:bg-green-600 text-white font-semibold py-4 px-8 rounded-lg text-lg transition duration-300">
+                <a href="https://wa.link/zr6262" target="_blank" id="whatsapp-link-button" class="inline-flex items-center justify-center bg-green-500 hover:bg-green-600 text-white font-semibold py-4 px-8 rounded-lg text-lg transition duration-300">
                     <i class="fab fa-whatsapp text-2xl mr-2"></i> PREGUNTA AQUÍ
                 </a>
             </div>
@@ -922,6 +922,10 @@
         </div>
     </div>
 
+    <a href="https://wa.link/zr6262" target="_blank" class="fixed bottom-4 right-4 z-50 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg transition duration-300">
+        <i class="fab fa-whatsapp text-3xl"></i>
+    </a>
+
     <footer class="bg-gray-800 text-white py-10">
         <div class="container mx-auto px-6 text-center">
             <div class="mb-4">
@@ -984,6 +988,7 @@
             const mobileAgendarButton = document.getElementById('mobile-agendar-button');
             const essentialConfigButton = document.getElementById('essential-config-button'); // Botón de Configuración esencial
             const advancedConfigButton = document.getElementById('advanced-config-button'); // Nuevo botón de Configuración avanzada
+            const whatsappLinkButton = document.getElementById('whatsapp-link-button');
 
 
             function openModal() {
@@ -992,6 +997,11 @@
 
             function closeModal() {
                 if (modal) modal.classList.add('hidden');
+            }
+
+            // Función para generar un ID de evento único
+            function generateUniqueEventId() {
+                return Date.now() + '-' + Math.random().toString(36).substr(2, 9);
             }
 
             // Event listeners para botones que abren el modal
@@ -1037,7 +1047,8 @@
                         'event_category': 'CTA',
                         'event_action': 'click',
                         'event_label': 'Abrir Formulario - Hero',
-                        'button_text': this.textContent.trim()
+                        'button_text': this.textContent.trim(),
+                        'unique_event_id': generateUniqueEventId()
                     });
                 });
             }
@@ -1050,7 +1061,8 @@
                         'event_category': 'CTA',
                         'event_action': 'click',
                         'event_label': 'Abrir Formulario - Nueva Seccion',
-                        'button_text': this.textContent.trim()
+                        'button_text': this.textContent.trim(),
+                        'unique_event_id': generateUniqueEventId()
                     });
                 });
             }
@@ -1063,7 +1075,8 @@
                         'event_category': 'CTA',
                         'event_action': 'click',
                         'event_label': 'Abrir Formulario - Seccion Beneficios',
-                        'button_text': this.textContent.trim()
+                        'button_text': this.textContent.trim(),
+                        'unique_event_id': generateUniqueEventId()
                     });
                 });
             }
@@ -1076,7 +1089,8 @@
                         'event_category': 'Servicios',
                         'event_action': 'click_conoce_mas',
                         'event_label': 'Configuración Esencial',
-                        'button_text': this.textContent.trim()
+                        'button_text': this.textContent.trim(),
+                        'unique_event_id': generateUniqueEventId()
                     });
                     window.location.href = 'esencial/'; // Redirige a esencial/
                 });
@@ -1090,7 +1104,8 @@
                         'event_category': 'Servicios',
                         'event_action': 'click_conoce_mas',
                         'event_label': 'Configuración Avanzada',
-                        'button_text': this.textContent.trim()
+                        'button_text': this.textContent.trim(),
+                        'unique_event_id': generateUniqueEventId()
                     });
                     window.location.href = 'avanzado/'; // Redirige a avanzado/
                 });
@@ -1104,7 +1119,8 @@
                         'event': 'navigation_click',
                         'event_category': 'Header Navigation',
                         'event_action': 'click_link',
-                        'event_label': this.textContent.trim() // Texto del enlace como etiqueta
+                        'event_label': this.textContent.trim(), // Texto del enlace como etiqueta
+                        'unique_event_id': generateUniqueEventId()
                      });
                 });
              });
@@ -1116,10 +1132,24 @@
                         'event': 'cta_click', // Es un Call to Action
                         'event_category': 'Header Navigation',
                         'event_action': 'click_agendar_open_modal', // Acción específica
-                        'event_label': this.textContent.trim() // Texto del botón
+                        'event_label': this.textContent.trim(), // Texto del botón
+                        'unique_event_id': generateUniqueEventId()
                      });
                 });
              }
+
+            // DataLayer para el botón de WhatsApp en la sección de servicios individuales
+            if (whatsappLinkButton) {
+                whatsappLinkButton.addEventListener('click', function() {
+                    dataLayer.push({
+                        'event': 'whatsapp_click',
+                        'event_category': 'Contacto',
+                        'event_action': 'click_whatsapp_link',
+                        'event_label': 'Pregunta Aquí - WhatsApp',
+                        'unique_event_id': generateUniqueEventId()
+                    });
+                });
+            }
 
 
             // DataLayer para elementos de navegación móvil
@@ -1134,6 +1164,7 @@
                        'event_category': 'Mobile Navigation',
                        'event_action': eventAction,
                        'event_label': eventLabel,
+                       'unique_event_id': generateUniqueEventId()
                     });
                 });
             });
@@ -1155,6 +1186,7 @@
                     'event_category': 'Contacto',
                     'event_action': 'submit_success',
                     'event_label': 'Formulario Agendar Llamada - MailerLite', // Etiqueta descriptiva
+                    'unique_event_id': generateUniqueEventId() // Agrega el ID único aquí
                 });
             }
             // Hacer la función globalmente accesible para MailerLite
