@@ -55,6 +55,9 @@
     </style>
 
     <script>
+        // Inicializa o dataLayer se ainda não estiver definido
+        window.dataLayer = window.dataLayer || [];
+
         (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
         .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
         n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
@@ -116,6 +119,18 @@
             var formContainer = document.getElementById('mailerliteFormContainer');
             formContainer.classList.remove('hidden'); // Remove a classe 'hidden' para mostrar o formulário.
             this.style.display = 'none'; // Opcional: esconde o botão depois de clicar.
+
+            // Envia o evento para o dataLayer com os parâmetros solicitados
+            window.dataLayer.push({
+                'event': 'basic_service_form_click', // Nome do evento
+                'eventCategory': 'CTA', // Categoria do evento
+                'eventAction': 'form_display', // Ação do evento (ex: 'click', 'submit', 'display')
+                'eventLabel': 'Servicio Esencial - Botón Formulario', // Rótulo do evento
+                'page_title': document.title, // Título da página
+                'page_location': window.location.href, // URL completa da página
+                'page_path': window.location.pathname, // Caminho da página
+                'event_id': Date.now() // ID único para cada evento
+            });
         });
     </script>
 
