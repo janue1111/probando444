@@ -188,5 +188,31 @@
         });
     </script>
 
+    <script>
+        // Obtém uma referência para o botão
+        const openFormButtonDataLayer = document.getElementById('openFormButton');
+
+        // Adiciona um listener de evento de clique ao botão
+        openFormButtonDataLayer.addEventListener('click', function() {
+            // Verifica se o Data Layer existe e é um array, senão, inicializa-o
+            window.dataLayer = window.dataLayer || [];
+
+            // Envia o evento para o Data Layer, incluindo os parâmetros de página
+            window.dataLayer.push({
+                'event': 'cta_avanzado_form',
+                'eventCategory': 'CTA',
+                'eventAction': 'click',
+                'eventLabel': 'Formulario_Analitica_Avanzada',
+                'event_id': Date.now().toString(), // ID único do evento
+
+                // Parâmetros de página adicionados explicitamente
+                'page_title': document.title,
+                'page_path': window.location.pathname,
+                'page_location': window.location.href
+            });
+            console.log('Evento cta_avanzado_form enviado ao Data Layer com event_id e parâmetros de página.');
+        });
+    </script>
+
 </body>
 </html>
