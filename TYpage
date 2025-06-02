@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gracias por tu Contacto</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Define a fonte padrão para o corpo do documento */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Estilo para a pequena onda decorativa abaixo do texto */
+        .wavy-underline {
+            position: relative;
+            display: inline-block;
+        }
+        .wavy-underline::after {
+            content: '';
+            position: absolute;
+            bottom: -8px; /* Ajusta a posição vertical da onda */
+            left: 0;
+            width: 100%;
+            height: 8px; /* Altura da onda */
+            /* Imagem SVG codificada em base64 para la onda azul */
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 50 10'%3E%3Cpath d='M0 5 Q 12.5 0, 25 5 T 50 5' stroke='%233B82F6' fill='transparent' stroke-width='2'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-size: contain; /* Ajusta para que a onda se escale bem */
+        }
+    </style>
+</head>
+<body class="bg-slate-100 flex flex-col min-h-screen">
+
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex-shrink-0">
+                    <img src="https://i.imgur.com/WXz0f3D.png" alt="Logo da Empresa" class="h-16">
+                </div>
+                <nav class="hidden md:flex space-x-8">
+                    </nav>
+                <div class="md:hidden">
+                    </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="md:hidden hidden bg-white shadow-lg">
+            </div>
+    </header>
+
+    <main class="flex-grow container mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
+        <div class="bg-white shadow-xl rounded-lg overflow-hidden">
+            <div class="md:flex">
+                <div class="md:w-1/2">
+                    <img src="https://placehold.co/600x400/E0E7FF/4A5568?text=Imagen+Anal%C3%ADtica"
+                         alt="Persona analizando datos en laptop y móvil"
+                         class="object-cover w-full h-64 md:h-full"
+                         onerror="this.onerror=null;this.src='https://placehold.co/600x400/CCCCCC/FFFFFF?text=Error+al+cargar+imagen';"
+                    >
+                </div>
+
+                <div class="md:w-1/2 p-6 sm:p-8 lg:p-12 flex flex-col justify-center">
+                    <h1 class="text-3xl sm:text-4xl font-bold text-slate-800 mb-4">
+                        <span class="wavy-underline">Gracias por tu Contacto</span>
+                    </h1>
+                    <p class="text-lg text-slate-600 mb-6">
+                        Nos pondremos en contacto contigo en breve.
+                    </p>
+                    <div class="mt-8">
+                        <a href="#"
+                           class="inline-block bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 px-6 rounded-lg shadow-md transition duration-300 ease-in-out transform hover:-translate-y-0.5">
+                           Volver al Inicio
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-slate-800 text-slate-300 py-8">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            </div>
+    </footer>
+
+    <script>
+        // Os scripts para o menu móvel foram removidos, pois não há mais menu.
+    </script>
+
+</body>
+</html>
