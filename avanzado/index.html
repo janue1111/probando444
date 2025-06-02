@@ -1,15 +1,12 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-THG7QWTX');</script>
-<!-- End Google Tag Manager -->
-    
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Servicio Esencial de Analítica Web</title>
     <script src="https://cdn.tailwindcss.com"></script>
@@ -115,12 +112,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </script>
     </head>
 <body class="p-4">
-<!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-THG7QWTX"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-    
-    <div class="container mx-auto bg-white p-6 rounded-lg shadow-md">
+<div class="container mx-auto bg-white p-6 rounded-lg shadow-md">
 
         <header class="text-center mb-8">
             <h1 class="text-3xl font-bold mb-2">¿Harto de los datos a medias? Tu negocio pide la Champions League de la analítica.</h1>
@@ -211,18 +205,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
             // Envia o evento para o Data Layer, incluindo os parâmetros de página
             window.dataLayer.push({
-                'event': 'cta_avanzado_form',
-                'eventCategory': 'CTA',
-                'eventAction': 'click',
-                'eventLabel': 'Formulario_Analitica_Avanzada',
-                'event_id': Date.now().toString(), // ID único do evento
-
-                // Parâmetros de página adicionados explicitamente
-                'page_title': document.title,
-                'page_path': window.location.pathname,
-                'page_location': window.location.href
+                'event': 'avanzado_form_service', // Nome do evento mais descritivo
+                'event_category': 'Servicios', // Categoria do evento
+                'event_action': 'click_conoce_mas', // Ação do evento
+                'event_label': 'Configuración Avanzada', // Rótulo do evento
+                'button_text': '¿Listo para dejar de adivinar? Haz clic aquí y rellena el formulario.', // Texto do botão
+                'page_title': document.title, // Título da página
+                'page_location': window.location.href, // URL completa da página
+                'page_path': window.location.pathname, // Caminho da página
+                'unique_event_id': Date.now() + '-' + Math.random().toString(36).substring(2, 15) // ID único para cada evento
             });
-            console.log('Evento cta_avanzado_form enviado ao Data Layer com event_id e parâmetros de página.');
+            console.log('Evento avanzado_form_service enviado ao Data Layer com event_id e parâmetros de página.');
         });
     </script>
 
