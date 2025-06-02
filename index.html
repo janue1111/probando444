@@ -1,23 +1,15 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-THG7QWTX');</script>
-<!-- End Google Tag Manager -->
-    
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jeraoo</title>
     <script>
-        // Configuración inicial del DataLayer
+        // Configuração inicial do DataLayer
         window.dataLayer = window.dataLayer || [];
         dataLayer.push({
             'event': 'pageView', // Evento de vista de página
-            'pageLocation': window.location.href, // URL completa de la página
+            'pageLocation': window.location.href, // URL completa da página
             'pagePath': window.location.pathname, // Ruta de la página
             'pageTitle': document.title, // Título de la página
             'referrer': document.referrer // Página de referencia
@@ -663,11 +655,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </head>
 <body class="bg-gray-100 text-gray-800">
 
-    <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-THG7QWTX"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-
     <div class="bg-purple-600 text-white text-sm text-center py-2 px-4">
         <span>Mejora los resultados de tus campañas este 2025</span>
     </div>
@@ -950,38 +937,38 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </footer>
 
     <script>
-        // Script para controlar el menú móvil
+        // Script para controlar o menu móvel
         const mobileMenuButton = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
 
         if (mobileMenuButton && mobileMenu) {
             mobileMenuButton.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden'); // Muestra u oculta el menú
+                mobileMenu.classList.toggle('hidden'); // Mostra ou oculta o menu
             });
 
-            // Cierra el menú móvil al hacer clic en un enlace (excepto el de agendar que abre modal)
+            // Fecha o menu móvel ao clicar em um link (exceto o de agendar que abre modal)
             const mobileLinks = mobileMenu.querySelectorAll('a');
             mobileLinks.forEach(link => {
                 link.addEventListener('click', () => {
-                     if (link.id !== 'mobile-agendar-button') { // No cerrar si es el botón de agendar del móvil
-                         // Si el enlace no es un ancla simple o es un ancla a otra página, no cerrar.
+                     if (link.id !== 'mobile-agendar-button') { // Não fechar se for o botão de agendar do móvel
+                         // Se o link não for uma âncora simples ou for uma âncora para outra página, não fechar.
                          if (!link.href.includes('#') || link.pathname !== window.location.pathname) {
-                            return; // Permite la navegación normal a otras páginas o anclas en otras páginas
+                            return; // Permite a navegação normal para outras páginas ou âncoras em outras páginas
                          }
-                         // Si es un enlace de ancla simple (#) o a la misma página, cerrar el menú
+                         // Se for um link de âncora simples (#) ou para a mesma página, fechar o menu
                          if (link.getAttribute('href') === '#' || link.href.endsWith('#')) {
-                            // Solo cierra si el menú está visible
+                            // Apenas fecha se o menu estiver visível
                             if (!mobileMenu.classList.contains('hidden')) {
-                                 // Si es solo #, cierra el menú
+                                 // Se for apenas #, fecha o menu
                                  if (link.getAttribute('href') === '#') {
                                      mobileMenu.classList.add('hidden');
                                  }
-                                 // Para otros anclajes en la misma página, también cierra
-                                 // (el scroll al ancla se maneja por el navegador)
+                                 // Para outras âncoras na mesma página, também fecha
+                                 // (o scroll para a âncora é tratado pelo navegador)
                             }
-                            return; // Evita que se cierre dos veces o comportamiento inesperado
+                            return; // Evita que seja fechado duas vezes ou comportamento inesperado
                          }
-                         // Para otros anclajes en la misma página, cierra el menú
+                         // Para outras âncoras na mesma página, fecha o menu
                          mobileMenu.classList.add('hidden');
                      }
                 });
@@ -989,18 +976,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         }
 
 
-        // Scripts para el pop-up del formulario de contacto
+        // Scripts para o pop-up do formulário de contato
         document.addEventListener('DOMContentLoaded', function() {
             const modal = document.getElementById('contact-modal');
             const closeButton = document.getElementById('close-modal-button');
-            // Asegúrate de que todos los botones que abren el modal estén aquí
+            // Certifique-se de que todos os botões que abrem o modal estejam aqui
             const openButtons = document.querySelectorAll(
                 '#open-modal-button-hero, #open-modal-button-nueva-seccion, #open-modal-button-video-section, #open-modal-button-beneficios'
             );
             const headerAgendarButton = document.getElementById('header-agendar-button');
             const mobileAgendarButton = document.getElementById('mobile-agendar-button');
-            const essentialConfigButton = document.getElementById('essential-config-button'); // Botón de Configuración esencial
-            const advancedConfigButton = document.getElementById('advanced-config-button'); // Nuevo botón de Configuración avanzada
+            const essentialConfigButton = document.getElementById('essential-config-button'); // Botão de Configuração essencial
+            const advancedConfigButton = document.getElementById('advanced-config-button'); // Novo botão de Configuração avançada
             const whatsappLinkButton = document.getElementById('whatsapp-link-button');
 
 
@@ -1012,12 +999,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 if (modal) modal.classList.add('hidden');
             }
 
-            // Función para generar un ID de evento único
+            // Função para gerar um ID de evento único
             function generateUniqueEventId() {
                 return Date.now() + '-' + Math.random().toString(36).substr(2, 9);
             }
 
-            // Event listeners para botones que abren el modal
+            // Event listeners para botões que abrem o modal
             openButtons.forEach(button => {
                 if (button) button.addEventListener('click', openModal);
             });
@@ -1028,24 +1015,24 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
              if (mobileAgendarButton) {
                  mobileAgendarButton.addEventListener('click', function(event) {
-                     event.preventDefault(); // Prevenir comportamiento por defecto si es un enlace
+                     event.preventDefault(); // Prevenir comportamento padrão se for um link
                      openModal();
-                    // Asegurarse de que el menú móvil se cierre si está abierto
+                    // Certificar-se de que o menu móvel se feche se estiver aberto
                     if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
                         mobileMenu.classList.add('hidden');
                     }
                  });
              }
 
-            // Event listener para el botón de cerrar el modal
+            // Event listener para o botão de fechar o modal
             if (closeButton) {
                 closeButton.addEventListener('click', closeModal);
             }
 
-            // Event listener para cerrar el modal haciendo clic fuera de él
+            // Event listener para fechar o modal clicando fora dele
             if (modal) {
                 modal.addEventListener('click', function(event) {
-                    if (event.target === modal) { // Si el clic es en el overlay
+                    if (event.target === modal) { // Se o clique for no overlay
                         closeModal();
                     }
                 });
@@ -1094,7 +1081,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 });
             }
 
-            // Evento para el botón "Tracking esencial(aquí)"
+            // Evento para o botão "Tracking essencial(aquí)"
             if (essentialConfigButton) {
                 essentialConfigButton.addEventListener('click', function() {
                     dataLayer.push({
@@ -1105,11 +1092,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         'button_text': this.textContent.trim(),
                         'unique_event_id': generateUniqueEventId()
                     });
-                    window.location.href = 'esencial/'; // Redirige a esencial/
+                    window.location.href = 'esencial/'; // Redireciona para esencial/
                 });
             }
 
-            // Evento para el botón "Tracking avanzado(aquí)"
+            // Evento para o botão "Tracking avanzado(aquí)"
             if (advancedConfigButton) {
                 advancedConfigButton.addEventListener('click', function() {
                     dataLayer.push({
@@ -1120,38 +1107,38 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         'button_text': this.textContent.trim(),
                         'unique_event_id': generateUniqueEventId()
                     });
-                    window.location.href = 'avanzado/'; // Redirige a avanzado/
+                    window.location.href = 'avanzado/'; // Redireciona para avanzado/
                 });
             }
 
-            // DataLayer para enlaces de navegación del header (desktop)
-            const navLinks = document.querySelectorAll('header .hidden.md\\:flex a'); // Selectores más específicos
+            // DataLayer para links de navegação do cabeçalho (desktop)
+            const navLinks = document.querySelectorAll('header .hidden.md\\:flex a'); // Seletores mais específicos
              navLinks.forEach(link => {
                 link.addEventListener('click', function() {
                      dataLayer.push({
                         'event': 'navigation_click',
                         'event_category': 'Header Navigation',
                         'event_action': 'click_link',
-                        'event_label': this.textContent.trim(), // Texto del enlace como etiqueta
+                        'event_label': this.textContent.trim(), // Texto do link como etiqueta
                         'unique_event_id': generateUniqueEventId()
                      });
                 });
              });
 
-             // DataLayer para el botón "Agendar Llamada" del header (desktop)
+             // DataLayer para o botão "Agendar Chamada" do cabeçalho (desktop)
              if (headerAgendarButton) {
                 headerAgendarButton.addEventListener('click', function() {
                      dataLayer.push({
-                        'event': 'cta_click', // Es un Call to Action
+                        'event': 'cta_click', // É um Call to Action
                         'event_category': 'Header Navigation',
-                        'event_action': 'click_agendar_open_modal', // Acción específica
-                        'event_label': this.textContent.trim(), // Texto del botón
+                        'event_action': 'click_agendar_open_modal', // Ação específica
+                        'event_label': this.textContent.trim(), // Texto do botão
                         'unique_event_id': generateUniqueEventId()
                      });
                 });
              }
 
-            // DataLayer para el botón de WhatsApp en la sección de servicios individuales
+            // DataLayer para o botão do WhatsApp na seção de serviços individuais
             if (whatsappLinkButton) {
                 whatsappLinkButton.addEventListener('click', function() {
                     dataLayer.push({
@@ -1165,7 +1152,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             }
 
 
-            // DataLayer para elementos de navegación móvil
+            // DataLayer para elementos de navegação móvel
             const mobileNavItems = document.querySelectorAll('#mobile-menu a, #mobile-menu button');
             mobileNavItems.forEach(item => {
                 item.addEventListener('click', function() {
@@ -1183,33 +1170,33 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             });
 
 
-            // Función de éxito para el formulario de MailerLite
+            // Função de sucesso para o formulário de MailerLite
             function ml_webform_success_24087739() {
-                // Redirección a la página de gracias
+                // Redirecionamento para a página de agradecimento
                 try {
-                    // Intenta redirigir la ventana principal si está en un iframe
-                    window.top.location.href = 'https://proband13132.blogspot.com/2025/03/pagina-de-gracias.html';
+                    // Tenta redirecionar a janela principal se estiver em um iframe
+                    window.top.location.href = 'TYpage.html'; // Alterado para TYpage.html
                   } catch (e) {
-                    // Si falla (por restricciones de cross-origin), redirige la ventana actual
-                    window.location.href = 'https://proband13132.blogspot.com/2025/03/pagina-de-gracias.html';
+                    // Se falhar (por restrições de cross-origin), redireciona a janela atual
+                    window.location.href = 'TYpage.html'; // Alterado para TYpage.html
                   }
-                // Envío de evento a DataLayer tras el éxito del formulario
+                // Envio de evento para DataLayer após o sucesso do formulário
                 dataLayer.push({
                     'event': 'mailerlite_form_success',
                     'event_category': 'Contacto',
                     'event_action': 'submit_success',
-                    'event_label': 'Formulario Agendar Llamada - MailerLite', // Etiqueta descriptiva
-                    'unique_event_id': generateUniqueEventId() // Agrega el ID único aquí
+                    'event_label': 'Formulario Agendar Llamada - MailerLite', // Etiqueta descritiva
+                    'unique_event_id': generateUniqueEventId() // Adiciona o ID único aqui
                 });
             }
-            // Hacer la función globalmente accesible para MailerLite
+            // Torna a função globalmente acessível para MailerLite
             window.ml_webform_success_24087739 = ml_webform_success_24087739;
         });
 
     </script>
     <script src="https://groot.mailerlite.com/js/w/webforms.min.js?v176e10baa5e7ed80d35ae235be3d5024" type="text/javascript"></script>
     <script>
-        fetch("https://assets.mailerlite.com/jsonp/1404722/forms/149863715614754623/takel") // Esto parece ser una llamada de seguimiento o configuración de MailerLite
+        fetch("https://assets.mailerlite.com/jsonp/1404722/forms/149863715614754623/takel") // Isso parece ser uma chamada de rastreamento ou configuração do MailerLite
     </script>
 
 </body>
